@@ -1,0 +1,115 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<stdlib.h>
+int top = -1, z[30];
+int i,value,ch;
+void Push();
+void Pop();
+void Display();
+void Odd();
+void Even();
+
+void main()
+{
+ clrscr();
+ while(1)
+  {
+   cout<<"\n\n1.Push \n2.Pop \n3.Display \n4.Display Odd \n5.Input Divisible \n6.Exit \nInput Choice: ";
+   cin>>ch;
+   switch(ch)
+   {
+    case 1:Push();break;
+    case 2:Pop();break;
+    case 3:Display();break;
+    case 4:Odd();break;
+    case 5:Even();break;
+    case 6:exit(0);
+    default:cout<<"Invalid Choice!\n";
+   }
+  }
+}
+
+void Push()
+{
+  if(top == 4)
+  {
+   cout<<"\n Stack is Full or Overflow! \n";
+  }
+ else
+ {
+  cout<<"Enter a value: ";
+  cin>>value;
+  top++;
+  z[top]= value;
+  cout<<endl;
+ }
+}
+
+void Pop()
+{
+ if(top == -1)
+ {
+ cout<<"\n Stack is Empty or Underflow! \n";
+ }
+ else
+ {
+  cout<<"\nPop: "<<z[top] << endl;
+  top--;
+ }
+}
+
+void Display()
+{
+ if(top == -1)
+ {
+ cout<<" \n Nothing to Display! \n";
+ }
+ else
+ {
+  cout<<"\n Stacks: ";
+  for(i=0; i<=top; i++)
+   {
+    cout<< z[i] <<"\t";
+   }
+ }
+}
+
+void Odd()
+{
+  if(top== -1)
+  {
+  cout<<"There's no odd number in the stack\n";
+  }
+  else
+  {
+   cout<<"Odd Number in the Stacks: ";
+   for(i=0; i<=top; i++)
+    {
+      if(z[i]%2!=0)
+      {
+       cout<<z[i]<<"\t";
+      }
+    }
+  }
+}
+
+void Even()
+{
+ int a;
+ if(top == -1)
+ {
+  cout<<"There's no divisible by 2 or even number\n";
+ }
+ else
+ cout<<"Enter divisible number: ";
+ cin>>a;
+ cout<<"The numbers that is divisible by "<< a<<": ";
+ for(i=0; i<=top; i++)
+ {
+  if(z[i]%a==0)
+  {
+   cout<<z[i]<<"\t";
+  }
+ }
+}

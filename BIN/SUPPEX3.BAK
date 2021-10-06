@@ -1,0 +1,32 @@
+#include <iostream.h>
+#include <time.h>
+#include <stdlib.h>
+#include <conio.h>
+int numbers[3];
+int answer;
+void srand()
+ {
+   srand (time(0));
+   while (answer != -1)
+     {
+       numbers[0] = rand() % 9 + 1;
+       numbers[1] = rand() % 9 + 1;
+       numbers[2] = numbers[0] * numbers[1];
+       cout << "Correctly answer the following or enter -1 to quit" << endl;
+       cout << "\n\n""How much is " << numbers[0] << " times " << numbers[1] << "?" << endl;
+       cin >> answer;
+      if (answer == numbers[0] * numbers[1])
+      {
+       cout << "\n""Correct!"<< endl;
+      }
+      else
+      {
+       cout << "\nNo. Please try agan! The correct answer was " << numbers[2] << endl;
+      }
+     }
+ }
+    void main()
+    {
+      clrscr();
+      srand();
+    }

@@ -1,0 +1,8 @@
+Average high for the year: -1.13e+03
+
+Average low for the year: -1.13e+03
+
+The index high temperature is 11798
+
+The index low temperature is -38
+

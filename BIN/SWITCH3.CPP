@@ -1,0 +1,23 @@
+#include<iostream.h>
+#include<conio.h>
+int main()
+{
+ clrscr();
+ int Number;
+
+ cout<<"Type a number between 1 and 3: ";
+ cin>> Number;
+ switch(Number)
+ {
+  case 1:
+	 cout<<"\nYou typed 1.";
+  case 2:
+	 cout<<"\nYou typed 2.";
+  case 3:
+	 cout<<"\nYou typed 3.";
+  default:
+	 cout<< endl << Number <<" is out of the requested range.";
+  }
+  getch();
+  return 0;
+}

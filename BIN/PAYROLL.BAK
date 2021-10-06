@@ -1,0 +1,42 @@
+#include<iostream.h>
+#include<conio.h>
+int main()
+{
+ clrscr();
+ char typeof,cont,name;
+ int Unitrate,Numbunit,NumbAbsent;
+ int date = 1;
+ while( date == 1 )
+ {
+  cout<<" Name ";
+  cin>>name;
+  cout<<" Type of Employee: ";
+  cin>>typeof;
+  cout<<" Per unit rate: ";
+  switch(typeof) {
+   case 'N':
+   case 'n':
+	Unitrate = 800;break;
+   case 'M':
+   case 'm':
+	Unitrate = 1200;break;
+   case 'D':
+   case 'd':
+	Unitrate = 1600;break;
+   }
+   cout<<" Per unit rate is " << Unitrate << endl;
+   cout<<" Number of units ";
+   cin>>Numbunit;
+   cout<<"Number of Absents ";
+   cin>>NumbAbsent;
+   cout<<" Total Pay is " << (Unitrate * Numbunit) - (Unitrate * NumbAbsent) << endl;
+   cout<<" Continue? (Y/N)";
+   if( cont == 'Y' || cont == 'y')
+    cont = 1;
+    cin>> Y >> y;
+   if( cont == 'N' || cont == 'n')
+    cont = 0;
+    cin>> N >> y;
+   }
+ return 0;
+}

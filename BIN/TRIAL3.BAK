@@ -1,0 +1,76 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<stdlib.h>
+int top = -1, z[5];
+
+void Push(int value)
+{ 
+ if(top == 4)
+ {
+  cout<<"\n Stack is Full or Overflow! \n";
+ }
+ else
+ {
+  top++;
+  z[top]= value;
+  }
+}
+ 
+void Pop()
+{ 
+ if(top == -1)
+ {
+ cout<<"\n Stack is Empty or Underflow! \n";
+ }
+ else
+ {
+  top--;
+ }
+}
+
+void Display()
+{ 
+ if(top == -1)
+ {
+ cout<<" \n Nothing to Display! \n";
+ }
+ else
+ {
+  cout<<" \n Array is: ";
+  for(int i=0; i<=top; i++)
+   {
+    cout<<"\t"<<z[i];
+   }
+  }
+}
+
+void main()
+{
+ clrscr();
+ int value,choice;
+ do
+ {
+ cout<<"\n1.Push \n2.Pop \n3.Display \n4.Exit \nInputChoice: ";
+ cin>>choice;
+ system("cls");
+ if(choice == 1)
+ {
+  cout<<"\nEnter Value: ";
+  cin>>value;
+  Push(value);
+ }
+ if(choice == 2)
+ {
+  Pop();
+ }
+ if(choice == 3)
+ {
+  Display();
+ }
+ }while(choice !=4);
+ cout<<" \n\n\nE X I T I N G.......\n";
+ getch();
+}
+
+

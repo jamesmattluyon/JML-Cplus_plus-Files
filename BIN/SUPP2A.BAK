@@ -1,0 +1,26 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+
+void main()
+{
+   clrscr();
+   int i;
+   char string[100];
+   cout<<"  Enter a string: ";
+   cin.getline(string,100);
+   for(i = 0;i < 100; i++)
+   if(string[i]!='\0' && string[i]!=32)
+   {
+   string[i] = string[i] + 1;
+   }
+   if(string[i]==32)
+   {
+    string[i]=string[i];
+   }
+   cout <<"Encrypted string: " << string << endl;
+   getch();
+}

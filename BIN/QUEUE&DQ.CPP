@@ -1,0 +1,124 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<stdio.h>
+#define max 30
+int q[max],front=-1,rear=-1;
+int i,data;
+void enqueue();
+void dequeue();
+void EvenNumber();
+void display();
+void OddNumber();
+void main()
+{
+ clrscr();
+ int ch;
+ while(1)
+ {
+ cout<<"\n\n1. Queue";
+ cout<<"\n2. Dequeue";
+ cout<<"\n3. Display";
+ cout<<"\n4. Display Odd";
+ cout<<"\n5. Input Divisible";
+ cout<<"\n6. Exit";
+ cout<<"\nEnter Choice: ";
+ cin>>ch;
+  switch(ch)
+  {
+   case 1: enqueue();break;
+   case 2: dequeue();break;
+   case 3: display();break;
+   case 4: OddNumber();break;
+   case 5: EvenNumber();break;
+   case 6: exit(0);
+   default: cout<<"Invalid Choice";
+  }
+ }
+}
+void enqueue()
+{
+ if(rear==max-1)
+ {
+  cout<<"Overflow";
+ }
+ else
+ {
+  if(front==-1)
+  {
+   front = 0;
+  }
+  cout<<"Enter Element: ";
+  cin>>data;
+  rear++;
+  q[rear]=data;
+  }
+}
+
+void dequeue()
+{
+ if(front == -1 || front > rear)
+ {
+  cout<<"\nUnderflow";
+ }
+ else
+ {
+  cout<<"\nDequeued: " << q[front] << endl;
+  front++;
+ }
+}
+
+void display()
+{
+ if(front == -1)
+ {
+  cout<<"Queue is Empty\n";
+ }
+ else
+ {
+  cout<<"Elements: ";
+  for(i=front; i<= rear; i++)
+  {
+   cout<< q[i] <<"\t";
+  }
+ }
+}
+
+void OddNumber()
+{
+ if(front == -1)
+ {
+ cout<<"There's no inputted odd numbers\n";
+ }
+ else
+ {
+  cout<<"Odd Number in stacks: ";
+  for(i=front; i<=rear; i++)
+  {
+   if(q[i]%2!=0)
+   {
+   cout<<q[i]<<"\t";
+   }
+  }
+ }
+}
+
+void EvenNumber()
+{
+  int a;
+  if(front == -1)
+  {
+  cout<<"There's no divisible by 2 or even number\n";
+  }
+  else
+  cout<<"Enter Divisible: ";
+  cin>>a;
+  cout<<"Even Number in stacks "<<a<<": ";
+  for(i=front;i<=rear;i++)
+  {
+   if(q[i]%a==0)
+   {
+    cout<<q[i]<<"\t";
+   }
+  }
+}

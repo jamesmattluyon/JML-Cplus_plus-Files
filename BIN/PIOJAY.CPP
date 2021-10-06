@@ -1,0 +1,21 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+ clrscr();
+ int jay[5] = {20, 21, 31, 51, 40};
+ int pio[5] = {1, 10, 15, 16, 17};
+ int x, sum[5];
+
+ for(x=0; x<5; x++)
+ {
+   sum[x] = jay[x] + pio[x];
+   cout<<" The sum is " << sum[x] << endl;
+ }
+  cout<<"        -----------------------";
+  cout<<"\n Jay = | " << jay[0] <<" | "<< jay[1] <<" | "<< jay[2] <<" | "<< jay[3] <<" | "<< jay[4] <<" | " << endl;
+  cout<<" Pio = | " << pio[0] <<"  | "<< pio[1] <<" | "<< pio[2] <<" | "<< pio[3] <<" | "<< pio[4] <<" | "<< endl;
+  cout<<" Sum = | " << sum[0] <<" | "<< sum[1] <<" | "<< sum[2] <<" | "<< sum[3] <<" | "<< sum[4] <<" | "<< endl;
+  cout<<"        -----------------------";
+ getch();
+}

@@ -1,0 +1,126 @@
+#include <iostream.h>
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+#include <iomanip.h>
+
+
+string StudentName[3];
+
+double Sum=0.0;
+
+int main()
+{
+
+
+
+//Variables
+	
+int Scores[3][3];
+
+double StudentAve[3], QuizAve[3], TotalQuizAve3;
+
+cout<<setprecision(1)<<fixed;
+
+
+//Input name of Student
+for(int i=0; i<3; i++){
+
+cout<<"Enter Student Name: ";
+	cin>>StudentName[i];
+		
+	//Input Quiz Scores
+	
+ 		cout<<"\nEnter Quiz Scores: ";
+			for(int j=0; j<3; j++){
+				
+					cin>>Scores[i][j]; 
+			}
+			
+		cout<<endl;
+
+}
+
+
+
+
+//Calculating for Student Average
+
+for(int i=0; i<3; i++){
+	for(int j=0; j<3; j++){
+		
+		Sum = Sum + Scores[i][j];
+		
+	}
+	StudentAve[i]=Sum/3;
+	Sum=0;
+}
+
+
+//Calculating for total Quiz Average
+
+for(int i=0; i<1; i++){
+	for(int j=0; j<3; j++){
+			Sum= Sum + StudentAve[j];
+		}
+		TotalQuizAve3= Sum/3;
+		Sum=0;
+	}	
+
+//Calculating for Quiz Average
+
+for(int j=0; j<3; j++){
+	for(int i=0; i<3; i++){
+		
+		Sum = Sum + Scores[i][j];		
+	}
+	
+	QuizAve[j]=Sum/3;
+	Sum=0;
+	
+}
+
+//Display Ouput
+cout<<"Student name"<<"\tQuizzes"<<"\t\tAverage"<<endl;
+
+for(int i=0; i<3; i++){
+	
+	cout<<"  "<<StudentName[i];
+	
+			if(i>=1){
+				cout<<"  ";
+			}
+			
+			cout<<"\t";
+	
+		for(int j=0; j<3; j++){
+			
+			if(j>=1){
+				cout<<"  ";
+			}
+			
+			cout<<Scores[i][j]<<"  ";
+		}
+		
+			if(i<=0){
+				cout<<StudentAve[i];
+			}	
+	
+			else{
+				cout<<"\t"<<StudentAve[i];
+			}
+			
+ 		cout<<endl;
+}
+
+//Displaying Quiz Average
+	
+cout<<"Quiz Average\t";
+	for(int i=0; i<4; i++){
+		cout<<QuizAve[i]<<"  ";
+			QuizAve[3]=TotalQuizAve3;	
+}
+
+return 0;
+}
+ 

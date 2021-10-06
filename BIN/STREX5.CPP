@@ -1,0 +1,22 @@
+//This program illustrate the use of atof and atoi functions
+#include<iostream.h>
+#include<stdlib.h>
+#include<conio.h>
+int main()
+{
+clrscr();
+char buffer[100];
+float price;
+int quantity;
+cout<<"Enter price: ";
+cin.getline(buffer,100);
+price=atof(buffer);
+cout<<"Enter quantity: ";
+cin.getline(buffer,100);
+quantity=atoi(buffer);
+cout.setf(ios::fixed);
+cout.precision(2);
+cout<<"\nTotal Cost: "<<price*quantity;
+getch();
+return 0;
+}

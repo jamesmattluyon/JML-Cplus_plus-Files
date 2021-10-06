@@ -1,0 +1,28 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+#include<stdio.h>
+void main()
+{
+ clrscr();
+ char password[10],username[10],ch;
+ int i;
+ printf("Enter username: ");
+ gets(username);
+ printf("Enter password: ");
+ for(i=0;i<10;i++)
+ {
+  ch=getch();
+  password[i]=ch;
+  ch='*';
+  printf("%c",ch);
+ }
+ password[i]=' ';
+
+ printf(" Your password is: ");
+ for(i=0;i<10;i++)
+ {
+  printf("%c",password[i]);
+ }
+ getch();
+}

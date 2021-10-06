@@ -1,0 +1,111 @@
+	#include<iostream.h>
+#include<conio.h>
+int main()
+{
+ float PG,MG,FG;
+ int SG;
+ char value;
+ clrscr();
+ cout<<"Please enter your Prelim Grade: ";
+ cin>>PG;
+ cout<<"Please enter your Midterm Grade: ";
+ cin>>MG;
+ cout<<"Please enter your Final Grade: ";
+ cin>>FG;
+
+ SG = (PG * .3) + (MG * .3) + ( FG * .4);
+ cout<<"Your Semestral Grade is " << SG << endl;
+
+ switch (SG)
+ {
+  case 100:
+	  cout<<"Equivalent grade is A ";
+	  break;
+
+  case 99:
+	  cout<<"Equivalent grade is B ";
+	  break;
+  case 98:
+	  cout<<"Equivalent grade is B ";
+	  break;
+  case 97:
+	  cout<<"Equivalent grade is B ";
+	  break;
+  case 96:
+	  cout<<"Equivalent grade is B ";
+	  break;
+  case 95:
+	  cout<<"Equivalent grade is B ";
+	  break;
+  case 94:
+	  cout<<"Equivalent grade is B ";
+	  break;
+  case 93:
+	  cout<<"Equivalent grade is B ";
+	  break;
+  case 92:
+	  cout<<"Equivalent grade is B ";
+	  break;
+  case 91:
+	  cout<<"Equivalent grade is B ";
+	  break;
+  case 90:
+	  cout<<"Equivalent grade is B ";
+	  break;
+  case 89:
+	  cout<<"Equivalent grade is C ";
+	  break;
+  case 88:
+	  cout<<"Equivalent grade is C ";
+	  break;
+ case 87:
+	  cout<<"Equivalent grade is C ";
+	  break;
+ case 86:
+	  cout<<"Equivalent grade is C ";
+	  break;
+ case 85:
+	  cout<<"Equivalent grade is C ";
+	  break;
+ case 84:
+	  cout<<"Equivalent grade is C ";
+	  break;
+ case 83:
+	  cout<<"Equivalent grade is C ";
+	  break;
+
+ case 82:
+	  cout<<"Equivalent grade is C ";
+	  break;
+ case 81:
+	  cout<<"Equivalent grade is C ";
+	  break;
+
+ case 80:
+	  cout<<"Equivalent grade is C ";
+	  break;
+ case 79:
+	  cout<<"Equivalent grade is D ";
+	  break;
+ case 78:
+	  cout<<"Equivalent grade is D ";
+	  break;
+ case 77:
+	  cout<<"Equivalent grade is D ";
+	  break;
+ case 76:
+	  cout<<"Equivalent grade is D ";
+	  break;
+ case 75:
+	  cout<<"Equivalent grade is D ";
+	  break;
+
+
+
+  default:
+       cout<<"Equivalent grade is F";
+ }
+
+ getch();
+ return 0;
+}
